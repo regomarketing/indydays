@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indy Days 2026 &mdash; Race Into Excellence | REGO-FIX</title>
+  <meta name="description" content="Join REGO-FIX at the Center for Machining Excellence for Indy Days, May 13 &amp; 14, 2026. Free event featuring live machine demos, industry presentations, and networking in Whitestown, Indiana." />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rf-red:      #C8102E;
+      --rf-dark:     #1a1a1a;
+      --rf-mid:      #2d2d2d;
+      --rf-gold:     #D4AF37;
+      --rf-blue:     #003DA5;
+      --max-w:       1100px;
+      --pad-section: 4rem 2rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--rf-dark);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* Full-bleed band + centered content container */
+    .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ---- Checker bars ---- */
+    .checker-bar {
+      height: 14px;
+      background-image: repeating-conic-gradient(#000 0% 25%, #fff 0% 50%);
+      background-size: 14px 14px;
+    }
+    .sep-checker {
+      height: 8px;
+      background-image: repeating-conic-gradient(#000 0% 25%, #fff 0% 50%);
+      background-size: 8px 8px;
+    }
+
+    /* ---- Typography helpers ---- */
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--rf-red);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.05;
+    }
+    .section-body {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+      max-width: 680px;
+    }
+
+    /* ---- Buttons ---- */
+    .btn-primary {
+      background: var(--rf-red);
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.8rem 2.25rem;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 3px;
+      transition: background 0.15s;
+    }
+    .btn-primary:hover { background: #a50d24; }
+
+    .btn-secondary {
+      background: transparent;
+      color: rgba(255,255,255,0.75);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.8rem 2.25rem;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 3px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
+
+    .btn-white {
+      background: #fff;
+      color: var(--rf-red);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85rem 2.75rem;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 3px;
+      transition: opacity 0.15s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+
+    /* ---- Hero ---- */
+    .hero-band {
+      background: #111;
+      padding: 3rem 2rem 0;
+      text-align: center;
+    }
+    .hero-logo {
+      width: min(360px, 75%);
+      margin: 0 auto 1rem;
+    }
+    .hero-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .hero-dates {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+    .hero-loc {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.38);
+      margin-bottom: 1.75rem;
+    }
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-bottom: 2.5rem;
+    }
+
+    /* ---- Badge strip ---- */
+    .badge-strip { display: flex; background: var(--rf-red); }
+    .badge-item {
+      flex: 1;
+      padding: 0.85rem 0.5rem;
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      border-right: 1px solid rgba(255,255,255,0.25);
+    }
+    .badge-item:last-child { border-right: none; }
+    .badge-item strong { display: block; font-size: 1.4rem; line-height: 1.1; font-weight: 800; }
+
+    /* ---- About ---- */
+    .about-band { background: var(--rf-dark); padding: var(--pad-section); }
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 1.75rem;
+    }
+    .expect-card {
+      background: var(--rf-mid);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 1.1rem;
+    }
+    .expect-card .icon { font-size: 26px; color: var(--rf-red); margin-bottom: 0.6rem; }
+    .expect-card p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.3;
+    }
+
+    /* ---- Video ---- */
+    .video-band { background: #0d0d0d; padding: var(--pad-section); }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 1.5rem auto 0;
+      /* 16:9 ratio but never taller than 450px */
+      padding-top: min(56.25%, 450px);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* ---- Agenda ---- */
+    .agenda-band { background: #111; padding: var(--pad-section); }
+    .day-block { margin-bottom: 2.5rem; }
+    .day-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--rf-red);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .agenda-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .agenda-table tr { border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+    .agenda-table tr:last-child { border-bottom: none; }
+    .agenda-table td {
+      padding: 0.7rem 0.75rem 0.7rem 0;
+      vertical-align: top;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+    .agenda-table td:first-child {
+      white-space: nowrap;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.38);
+      letter-spacing: 0.04em;
+      width: 150px;
+      padding-right: 1.25rem;
+    }
+    .talk-title { font-weight: 600; color: rgba(255,255,255,0.92); display: block; font-size: 0.95rem; }
+    .talk-sub { font-size: 0.82rem; color: rgba(255,255,255,0.38); }
+    .location-pill {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(200,16,46,0.18);
+      color: #e87070;
+      padding: 1px 8px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      border: 0.5px solid rgba(200,16,46,0.35);
+    }
+    .network-row { background: rgba(0,61,165,0.1); border-left: 3px solid var(--rf-blue); }
+    .network-row td { color: rgba(255,255,255,0.4) !important; }
+    .food-row td    { color: rgba(255,255,255,0.32) !important; }
+    .highlight-row td { background: rgba(200,16,46,0.06); }
+
+    /* ---- IndyCar ---- */
+    .indycar-band { background: #0d0d0d; padding: var(--pad-section); }
+    .indycar-img-wrap {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto 2.5rem;
+      line-height: 0;
+    }
+    .indycar-img-wrap img { width: 100%; height: auto; border-radius: 4px; }
+    .indycar-copy { text-align: center; max-width: 640px; margin: 0 auto; }
+    .indycar-copy .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--rf-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .indycar-copy h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.05;
+      margin-bottom: 0.85rem;
+      color: #fff;
+    }
+    .indycar-copy p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.6);
+    }
+    .product-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1rem; justify-content: center; }
+    .product-chip {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 13px;
+      border: 1px solid var(--rf-gold);
+      color: var(--rf-gold);
+      border-radius: 2px;
+      opacity: 0.85;
+    }
+
+    /* ---- Partner logos ---- */
+    .partners-band { background: var(--rf-dark); padding: var(--pad-section); }
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 1.75rem;
+    }
+    .logo-tile {
+      background: #fff;
+      border-radius: 4px;
+      padding: 16px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 76px;
+    }
+    .logo-tile img { max-width: 100%; max-height: 46px; width: auto; height: auto; object-fit: contain; }
+
+    /* ---- Venue ---- */
+    .venue-band { background: #111; padding: var(--pad-section); }
+    .venue-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+    .venue-card {
+      background: var(--rf-mid);
+      border: 0.5px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+      padding: 1.1rem 1.25rem;
+    }
+    .vc-icon { color: var(--rf-red); font-size: 20px; margin-bottom: 8px; }
+    .vc-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.38);
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+    .vc-value { font-size: 0.92rem; font-weight: 500; color: rgba(255,255,255,0.85); line-height: 1.5; }
+    .vc-value a { color: rgba(255,255,255,0.45); font-size: 0.82rem; transition: color 0.15s; }
+    .vc-value a:hover { color: rgba(255,255,255,0.75); }
+
+    /* ---- CTA final ---- */
+    .cta-band { background: var(--rf-red); padding: 3.5rem 2rem; text-align: center; }
+    .cta-band h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .cta-band p { font-size: 1rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+
+    /* ---- Footer ---- */
+    .footer-band {
+      background: #000;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .footer-cme-logo { height: 52px; width: auto; opacity: 0.85; }
+    .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.28); letter-spacing: 0.06em; text-align: center; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      :root { --pad-section: 2.5rem 1.25rem; }
+      .inner { padding: 0 1.25rem; }
+      .badge-item { font-size: 0.62rem; }
+      .badge-item strong { font-size: 1rem; }
+      .section-title { font-size: 1.8rem; }
+      .agenda-table td:first-child { width: 95px; font-size: 0.75rem; }
+      .talk-title { font-size: 0.85rem; }
+      .logo-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+      .indycar-copy h2 { font-size: 1.7rem; }
+      .cta-band h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="checker-bar" aria-hidden="true"></div>
+
+  <header class="hero-band">
+    <img src="https://github.com/scribblesaurus/indy-days-2026/blob/main/IndyDays_Small_RedAccent.png?raw=true" alt="Indy Days: Race Into Excellence" class="hero-logo" />
+    <p class="hero-sub">Presented by REGO-FIX &bull; Center for Machining Excellence</p>
+    <p class="hero-dates">May 13 &amp; 14, 2026</p>
+    <p class="hero-loc">9:00 AM &ndash; 5:00 PM EDT &bull; Whitestown, Indiana</p>
+    <div class="cta-group">
+      <a href="https://form.jotform.com/260283833050148" class="btn-primary">Register Now</a>
+      <a href="https://regousa.com/wp-content/uploads/2026/04/26-REG-Indy-Days-Agenda-11x17-1.pdf" class="btn-secondary">Download Agenda</a>
+    </div>
+  </header>
+
+  <div class="checker-bar" aria-hidden="true"></div>
+
+  <div class="badge-strip" aria-label="Event highlights">
+    <div class="badge-item"><strong>2</strong>Days</div>
+    <div class="badge-item"><strong>25+</strong>Partners</div>
+    <div class="badge-item"><strong>Free</strong>Admission</div>
+    <div class="badge-item"><strong>Live</strong>Machine Demos</div>
+  </div>
+
+  <section class="about-band" aria-labelledby="about-heading">
+    <div class="inner">
+      <p class="section-label">About the Event</p>
+      <h2 class="section-title" id="about-heading">Precision. Power.<br>Performance.</h2>
+      <p class="section-body">May in Central Indiana means one thing: speed. Join REGO-FIX and the Center for Machining Excellence &mdash; just 30 minutes from the Indianapolis Motor Speedway &mdash; for two days of cutting-edge machine demonstrations, industry-leading presentations, and direct access to the technologies shaping the future of precision manufacturing.</p>
+      <div class="expect-grid">
+        <div class="expect-card"><div class="icon"><i class="ti ti-robot" aria-hidden="true"></i></div><p>Automation &amp; Robotics</p></div>
+        <div class="expect-card"><div class="icon"><i class="ti ti-tool" aria-hidden="true"></i></div><p>3-Axis, 5-Axis &amp; Swiss Demos</p></div>
+        <div class="expect-card"><div class="icon"><i class="ti ti-presentation" aria-hidden="true"></i></div><p>Industry Leader Talks</p></div>
+        <div class="expect-card"><div class="icon"><i class="ti ti-users" aria-hidden="true"></i></div><p>Customer &amp; Partner Networking</p></div>
+        <div class="expect-card"><div class="icon"><i class="ti ti-ruler-measure" aria-hidden="true"></i></div><p>3D Metrology &amp; Presetting</p></div>
+        <div class="expect-card"><div class="icon"><i class="ti ti-coffee" aria-hidden="true"></i></div><p>Food &amp; Drinks Provided</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-checker" aria-hidden="true"></div>
+
+  <section class="video-band" aria-labelledby="video-heading">
+    <div class="inner">
+      <p class="section-label">See It For Yourself</p>
+      <h2 class="section-title" id="video-heading">Highlights from<br>Indy Days 2025</h2>
+      <p class="section-body">See what Indy Days looked like last year &mdash; and get ready for an even bigger 2026.</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/_EJ9cHuUflo" title="Indy Days 2025 Highlight Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-checker" aria-hidden="true"></div>
+
+  <section class="agenda-band" aria-labelledby="agenda-heading">
+    <div class="inner">
+      <p class="section-label">Schedule</p>
+      <h2 class="section-title" id="agenda-heading">Agenda</h2>
+      <div class="day-block">
+        <span class="day-label">Wednesday &mdash; May 13</span>
+        <table class="agenda-table">
+          <tbody>
+            <tr><td>9:00 &ndash; 10:00 AM</td><td><span class="talk-title">Registration &amp; Networking</span></td></tr>
+            <tr><td>10:00 &ndash; 10:15 AM</td><td><span class="talk-title">Welcome from the CME</span></td></tr>
+            <tr><td>10:15 &ndash; 11:00 AM</td><td><span class="talk-title">Casual Networking with Customers &amp; Partners</span></td></tr>
+            <tr class="highlight-row">
+              <td>10:30 &ndash; 11:15 AM</td>
+              <td><span class="location-pill">Auditorium</span><br><span class="talk-title">Your Automation Journey &mdash; Simplified with FANUC Machine Tending Solutions</span><span class="talk-sub">Geoff Dawson &bull; Fanuc America</span></td>
+            </tr>
+            <tr class="food-row"><td>11:00 AM &ndash; 4:00 PM</td><td><span class="talk-title">Food Service / Lunch</span> <span class="talk-sub">Tent</span></td></tr>
+            <tr class="highlight-row">
+              <td>2:00 &ndash; 3:00 PM</td>
+              <td><span class="location-pill">Auditorium</span><br><span class="talk-title">Thinking Beyond Machine Tending: Expanding the Robot Cell to Unlock ROI</span><span class="talk-sub">Scott Kilpatrick &bull; Matrix Automation</span></td>
+            </tr>
+            <tr class="network-row"><td>3:00 &ndash; 5:00 PM</td><td><span class="talk-title">Networking with Customers, Partners &amp; Others</span></td></tr>
+            <tr><td>5:00 PM</td><td><span class="talk-title">Day Concludes</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="day-block">
+        <span class="day-label">Thursday &mdash; May 14</span>
+        <table class="agenda-table">
+          <tbody>
+            <tr><td>9:00 &ndash; 10:00 AM</td><td><span class="talk-title">Registration &amp; Networking</span></td></tr>
+            <tr><td>10:00 &ndash; 10:15 AM</td><td><span class="talk-title">Welcome from the CME</span></td></tr>
+            <tr><td>10:15 &ndash; 11:00 AM</td><td><span class="talk-title">Casual Networking with Customers &amp; Partners</span></td></tr>
+            <tr class="highlight-row">
+              <td>11:00 AM &ndash; 12:00 PM</td>
+              <td><span class="location-pill">Auditorium</span><br><span class="talk-title">Automation &mdash; A Customer's Perspective</span><span class="talk-sub">Dylan Jackson &bull; Proteum Machining</span></td>
+            </tr>
+            <tr class="food-row"><td>11:00 AM &ndash; 4:00 PM</td><td><span class="talk-title">Food Service / Lunch</span> <span class="talk-sub">Tent</span></td></tr>
+            <tr class="highlight-row">
+              <td>2:00 &ndash; 3:00 PM</td>
+              <td><span class="location-pill">Auditorium</span><br><span class="talk-title">Extending Tool Life</span><span class="talk-sub">John Miller &bull; Way of the Mill</span></td>
+            </tr>
+            <tr class="network-row"><td>3:00 &ndash; 5:00 PM</td><td><span class="talk-title">Networking with Customers, Partners &amp; Others</span></td></tr>
+            <tr><td>5:00 PM</td><td><span class="talk-title">Event Concludes &mdash; Thank you from CME</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-checker" aria-hidden="true"></div>
+
+  <section class="indycar-band" aria-labelledby="indycar-heading">
+    <div class="inner">
+      <div class="indycar-img-wrap">
+        <img src="https://github.com/scribblesaurus/indy-days-2026/blob/main/21RC-Rego-Fix-2026_01-30-A_Left3Qtr-Low2.png?raw=true" alt="ECR IndyCar built with REGO-FIX toolholding solutions" />
+      </div>
+      <div class="indycar-copy">
+        <p class="eyebrow">REGO-FIX on the Track</p>
+        <h2 id="indycar-heading">Built for the Fastest<br>Oval on Earth</h2>
+        <p>The ECR IndyCar running at the Indianapolis Motor Speedway is machined with REGO-FIX precision toolholding. Get a behind-the-wheel look at the car built with the same technology you'll see on the shop floor at Indy Days.</p>
+        <div class="product-chips">
+          <span class="product-chip">ER Collets</span>
+          <span class="product-chip">powRgrip&reg;</span>
+          <span class="product-chip">Swiss Toolholding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-checker" aria-hidden="true"></div>
+
+  <section class="partners-band" aria-labelledby="partners-heading">
+    <div class="inner">
+      <p class="section-label">Our Partners</p>
+      <h2 class="section-title" id="partners-heading">Participating<br>Companies</h2>
+      <p class="section-body">25+ industry leaders under one roof. From CAD/CAM to coolant, tooling to automation.</p>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/REGOFIX_Logo_50mm_CMYK.png" alt="REGO-FIX" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Blaser_Swissube_logo.png" alt="Blaser Swisslube" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/BrutschRuegger-Tools2.png" alt="Brutsch Ruegger Tools" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Logo_DIAMETAL_POS_PRINT.png" alt="Diametal" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Asset-1.png" alt="Partner" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/LOGO-GSI.png" alt="GSI" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2026/02/HEIDENHAIN-logotype-RGB-MASTER-scaled.png" alt="Heidenhain" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Heule_Logo_Transparent.png" alt="Heule" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/hM_CAD_CAM_4f.png" alt="hM CAD CAM" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/JKS-America-logo.png" alt="JKS America" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2026/03/Kern-logo.jpg" alt="Kern" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/KITJUSTIFIED-copy.png" alt="KIT" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/07/lang-usa_logo_cmyk_withoutClaim_usa.png" alt="Lang USA" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Horizontal.png" alt="Partner" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/MA-Ford-vector-logo-to-use-1.png" alt="MA Ford" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/MT_LOGO_CMYK.png" alt="MT" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2026/03/MMUS-BLACK-COLOR-STACKED.jpg" alt="MMUS" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/OmegaTMM_Logo_HighRes.png" alt="Omega TMM" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2024/12/Precitrame_Logo_Flag_RVB.jpg" alt="Precitrame" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Cutwell-logo-stack-color-1500px.jpg" alt="Cutwell" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/SolidCAM_Solid_Platform_Manufacturing.png" alt="SolidCAM" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/Tornos-Atlantic-Blue.png" alt="Tornos" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2025/02/WOTM-Logo-Red-Black.png" alt="Way of the Mill" /></div>
+        <div class="logo-tile"><img src="https://regousa.com/wp-content/uploads/2026/03/CMA_Stacked_3546.png" alt="CMA" /></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep-checker" aria-hidden="true"></div>
+
+  <section class="venue-band" aria-labelledby="venue-heading">
+    <div class="inner">
+      <p class="section-label">Venue</p>
+      <h2 class="section-title" id="venue-heading">Center for<br>Machining Excellence</h2>
+      <p class="section-body">A state-of-the-art manufacturing education and innovation facility in the heart of Central Indiana.</p>
+      <div class="venue-details">
+        <div class="venue-card">
+          <div class="vc-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+          <div class="vc-label">Address</div>
+          <div class="vc-value">4420 Anson Blvd<br>Whitestown, IN 46075</div>
+        </div>
+        <div class="venue-card">
+          <div class="vc-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
+          <div class="vc-label">Hours (Both Days)</div>
+          <div class="vc-value">9:00 AM &ndash; 5:00 PM EDT<br>Registration opens at 9 AM</div>
+        </div>
+        <div class="venue-card">
+          <div class="vc-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+          <div class="vc-label">Contact</div>
+          <div class="vc-value">+1 (317) 870-5959<br><a href="https://regousa.com/center-for-machining-excellence/">View CME Website &rarr;</a></div>
+        </div>
+        <div class="venue-card">
+          <div class="vc-icon"><i class="ti ti-car" aria-hidden="true"></i></div>
+          <div class="vc-label">Distance from IMS</div>
+          <div class="vc-value">~30 min from the<br>Indianapolis Motor Speedway</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-heading">
+    <h2 id="cta-heading">Seats Are Limited.<br>Register Today.</h2>
+    <p>Free to attend. Open to industry professionals, machinists, engineers, and partners.</p>
+    <a href="https://form.jotform.com/260283833050148" class="btn-white">Register Now &rarr;</a>
+  </section>
+
+  <div class="checker-bar" aria-hidden="true"></div>
+
+  <footer class="footer-band">
+    <img src="https://github.com/scribblesaurus/indy-days-2026/blob/main/CME_PNG-White_All.png?raw=true" alt="Center for Machining Excellence" class="footer-cme-logo" />
+    <p class="footer-text">&copy; 2026 REGO-FIX USA &bull; 4420 Anson Blvd, Whitestown IN 46075</p>
+  </footer>
+
+</body>
+</html>
